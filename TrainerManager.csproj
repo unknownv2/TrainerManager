@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Thierry\Downloads\TrainerManager-v3.0.3\TrainerManager.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{288D48DC-643F-4D60-965E-601A8358A541}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TrainerManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>12</LangVersion>
+    <ApplicationVersion>3.0.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>TrainerManager</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InputEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputType.cs" />
+    <Compile Include="InputData.cs" />
+    <Compile Include="HotkeyData.cs" />
+    <Compile Include="ToggleInputData.cs" />
+    <Compile Include="CommandInputData.cs" />
+    <Compile Include="NumericInputType.cs" />
+    <Compile Include="NumericInputData.cs" />
+    <Compile Include="SelectionInputData.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CreateConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GitRepo.cs" />
+    <Compile Include="InputKey.cs" />
+    <Compile Include="KeyConvert.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Cheat.cs" />
+    <Compile Include="HotkeyInput.cs" />
+    <Compile Include="CheatInput.cs" />
+    <Compile Include="InputArgs.cs" />
+    <Compile Include="CheatEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="RandomString.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Compatibility\V1Repo.cs" />
+    <Compile Include="Compatibility\GameV1.cs" />
+    <Compile Include="Compatibility\ToolV1.cs" />
+    <Compile Include="Compatibility\TrainerV1.cs" />
+    <Compile Include="Compatibility\ModV1.cs" />
+    <Compile Include="Compatibility\KeyboardInputV1.cs" />
+    <Compile Include="Compatibility\TransformationV1.cs" />
+    <Compile Include="Compatibility\RemoteGroupV1.cs" />
+    <Compile Include="Compatibility\RemoteInputV1.cs" />
+    <Compile Include="Compatibility\RemoteGame.cs" />
+    <Compile Include="Compatibility\RemoteProject.cs" />
+    <Compile Include="Compatibility\GameV2.cs" />
+    <Compile Include="Compatibility\GameMeta.cs" />
+    <Compile Include="CheatEngine\CheatTableCheatMerger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatEngine\CheatTableVersionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheatEngine\GameVersion.cs" />
+    <Compile Include="CheatEngine\CheatTable.cs" />
+    <Compile Include="CheatEngine\CheatEntries.cs" />
+    <Compile Include="CheatEngine\CheatEntry.cs" />
+    <Compile Include="CheatEngine\Hotkeys.cs" />
+    <Compile Include="CheatEngine\Hotkey.cs" />
+    <Compile Include="CheatEngine\KeyCollection.cs" />
+    <Compile Include="CheatEngine\CheatCodes.cs" />
+    <Compile Include="CheatEngine\CheatCodeEntry.cs" />
+    <Compile Include="CheatEngine\ByteSequence.cs" />
+    <Compile Include="CheatEngine\OffsetSequence.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheatEditor.resx" />
+    <EmbeddedResource Include="CheatEngine\CheatTableCheatMerger.resx" />
+    <EmbeddedResource Include="CheatEngine\CheatTableVersionSelector.resx" />
+    <EmbeddedResource Include="CreateConfig.resx" />
+    <EmbeddedResource Include="InputEditor.resx" />
+    <EmbeddedResource Include="Main.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
